@@ -11,6 +11,13 @@ In this activity you'll learn how to use the `@Input` decorator to send informat
 To create an `Input` property, add the `@Input` decorator to a property of a component class:
 
 <docs-code header="user.component.ts" language="ts">
+  @Component({
+  selector: 'app-user',
+  template: `
+    <p>The user's name is {{occupation}}</p>
+  `,
+  standalone: true,
+})
 class UserComponent {
   @Input() occupation = '';
 }
